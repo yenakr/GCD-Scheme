@@ -1,0 +1,15 @@
+(define (gcd a b)
+  (cond ((= b 0) a)
+        (else (gcd b (modulo a b)))))
+
+(define (main)
+  (display "Enter the first number: ")
+  (let ((a (read)))
+    (display "Enter the second number: ")
+    (let ((b (read)))
+      (let ((result (gcd a b)))
+        (display "The greatest common divisor is: ")
+        (display result)
+        (newline)))))
+
+(main)
